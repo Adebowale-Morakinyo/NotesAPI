@@ -67,7 +67,7 @@ class Note(Resource):
 
 class NoteList(Resource):
     def get(self):
-        return {'Notes': [note.json() for note in NoteModel.query.all()]}
+        return {'Notes': [note.json() for note in NoteModel.find_all()]}
 
 
 class NoteTag(Resource):

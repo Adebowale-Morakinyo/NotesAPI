@@ -36,6 +36,10 @@ class NoteModel(db.Model):
         return cls.query.filter_by(title=title).first()
 
     @classmethod
+    def find_all(cls):
+        return cls.query.all()
+
+    @classmethod
     def get_note_tag(cls, title):
         note_tag_list = list(tag for tag in title.tag)
         if note_tag_list:

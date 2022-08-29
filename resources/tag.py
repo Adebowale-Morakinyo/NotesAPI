@@ -50,4 +50,4 @@ class Tag(Resource):
 
 class TagList(Resource):
     def get(self):
-        return {'Tags': [note.json() for note in TagModel.query.all()]}
+        return {'Tags': [note.json() for note in TagModel.find_all()]}
